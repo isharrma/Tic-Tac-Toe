@@ -1,5 +1,6 @@
 # Tic-Tac-Toe
-Its a simple game/project of Tic Tac Toe.In the game,you use positions(1-9) to move or put an O or X at the specified position.It's a 2 player game ,not an automated at this point.
+Its a simple game/project of Tic Tac Toe.In the game,you use positions(1-9) to move or put an O or X at the specified position.It's a 2 player game ,not an automated at this point. 
+It's my first project ,I made to improve my skills in python. I would love to have some nice suggestions and implement them and have a better project .
 
 # Players
 Here you and your friend can play this classic and simple game.In the code X is assigned to Player 1 and O is assigned to Player 2.
