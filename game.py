@@ -8,21 +8,21 @@ player = 1
 win = 0
 is_draw = 0
 
-
-def print_board():                                         # prints the board
+# prints the board
+def print_board():                                         
     print(board[0], " | " + board[1] + " | " + board[2])
     print("------------")
     print(board[3], " | " + board[4] + " | " + board[5])
     print("------------")
     print(board[6], " | " + board[7] + " | " + board[8])
 
-
-def startgame():                                            # Initializes the Game
+# Initializes the Game
+def startgame():                                            
     print_board()
     print("Choose a Position: ")
     
-
-def p1(a):                                              # Set X at given position by Player1
+# Set X at given position by Player1
+def p1(a):                                              
     global flag
     if a > 9:
         print("Invalid Move")
@@ -32,8 +32,8 @@ def p1(a):                                              # Set X at given positio
         board[a] = "X"
     flag = flag - 1
 
-
-def p2(a):                                               # Set O at given position by Player2
+# Set O at given position by Player2
+def p2(a):                                               
     global flag
     if a > 9:
         print("Invalid Move")
@@ -43,8 +43,8 @@ def p2(a):                                               # Set O at given positi
         board[a] = "O"
     flag = flag - 1
 
-
-def move(a):                                               # prints X or O
+ # prints X or O
+def move(a):                                              
     if player == 1:
         p1(a)
     else:
@@ -52,34 +52,34 @@ def move(a):                                               # prints X or O
     print_board()
     print()
 
-
-def change():                                                 # Controls which Player has the chance
+# Controls which Player has the chance
+def change():                                                 
     global player
     if player == 1:
         player = 2
     else:
         player = 1
 
-
-def horizontal():                                              # Check for Win Horizontally
+# Check for Win Horizontally
+def horizontal():                                              
     global win
     if (board[0] == board[1] == board[2]!="-") or (board[3] == board[4] == board[5]!="-") or (board[6] == board[7] == board[8]!="-"):
                 win = 1
 
-
-def vertical():                                                # Check for Win Vertically
+# Check for Win Vertically
+def vertical():                                                
     global win
     if (board[0] == board[3] == board[6]!="-") or (board[1] == board[4] == board[7]!="-") or (board[2] == board[5] == board[8]!="-"):
                 win = 1
 
-
-def diagonal():                                               # Check for Win Diagonally
+ # Check for Win Diagonally
+def diagonal():                                              
     global win
     if (board[0] == board[4] == board[8]!="-") or (board[2] == board[4] == board[6]!="-"):
                 win = 1
 
-
-def check():                                                 # Check for Win
+ # Check for Win
+def check():                                                
     global win
     horizontal()
     vertical()
@@ -87,8 +87,8 @@ def check():                                                 # Check for Win
     if win==1:
         print("You Won! Player " + str(player))
 
-
-def draw():                                                 # Checks for Draw
+  # Checks for Draw
+def draw():                                               
     global is_draw
     if flag<0:
         print("Draw :(")
